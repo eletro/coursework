@@ -7,6 +7,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
                        url(r'^gallery/$', 'gallery.views.upload'),
                        url(r'^gallery/lists$', 'gallery.views.lists'),
+                       url(r'^admin/', include(admin.site.urls)),
                        )
 
 if settings.DEBUG:
